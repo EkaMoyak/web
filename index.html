@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Рейтинг моих любимых блюд</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f9f2f5;
+            color: #5d3a4e;
+            margin: 0;
+            padding: 30px;
+        }
+
+        h1 {
+            color: #8c5a75;
+            text-align: center;
+            margin-bottom: 30px;
+            font-weight: 300;
+            font-size: 2.5em;
+        }
+
+        .table-container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: white;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(140, 90, 117, 0.1);
+            overflow: hidden;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        thead {
+            background-color: #e8c8d8;
+        }
+
+        th {
+            padding: 15px;
+            text-align: left;
+            font-weight: 500;
+            color: #5d3a4e;
+        }
+
+        td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #f0e1e8;
+        }
+
+        tr:last-child td {
+            border-bottom: none;
+        }
+
+        tr:hover {
+            background-color: #fdf7fa;
+        }
+
+        .rating {
+            display: inline-block;
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-weight: bold;
+        }
+
+        .rating-high {
+            background-color: #e8d8e8;
+            color: #7d5a7d;
+        }
+
+        .rating-medium {
+            background-color: #f0e1e8;
+            color: #8c5a75;
+        }
+
+        .rating-low {
+            background-color: #f8e8e8;
+            color: #a35a6e;
+        }
+
+        a {
+            color: #9d72ab;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        a:hover {
+            color: #8c5a75;
+            text-decoration: underline;
+        }
+
+        .dish-image {
+            width: 80px;
+            height: 80px;
+            object-fit: cover;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+    <h1>Мой рейтинг блюд</h1>
+
+    <div class="table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>Название блюда</th>
+                    <th>Оценка</th>
+                    <th>Рецепт</th>
+                    <th>Фото</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Тыквенный суп-пюре</td>
+                    <td><span class="rating rating-high">9/10</span></td>
+                    <td><a href="https://www.gastronom.ru/recipe/32389/tykvennyj-sup-s-kopchenoj-semgoj" target="_blank">Рецепт</a></td>
+                    <td><img src="https://images.gastronom.ru/zEYqBihFl7DjypsTfj4QzkKB7RKkFljvI89mpv4iSbY/pr:recipe-cover-image/g:ce/rs:auto:0:0:0/L2Ntcy9hbGwtaW1hZ2VzL2FkZTk5NjJkLTk5MzEtNDQ1YS1hYTkxLTJmZjEzYThkYWZmZS5qcGc.webp" alt="Тыквенный суп" class="dish-image"></td>
+                </tr>
+                <tr>
+                    <td>Паста Карбонара</td>
+                    <td><span class="rating rating-high">10/10</span></td>
+                    <td><a href="https://www.gastronom.ru/recipe/56539/pasta-karbonara" target="_blank">Рецепт</a></td>
+                    <td><img src="https://images.gastronom.ru/BP8xCASA30h1tEUTfC_pv6KfYhlgx3DJ7j8bxvFn2qg/pr:recipe-cover-image/g:ce/rs:auto:0:0:0/L2Ntcy9hbGwtaW1hZ2VzLzEzMWIxOGQ0LTlhZjItNGMyMC04ZDNlLTlkYzZhNTU1OGI2Ny5qcGc.webp" alt="Паста Карбонара" class="dish-image"></td>
+                </tr>
+                <tr>
+                    <td>Оливье</td>
+                    <td><span class="rating rating-medium">7/10</span></td>
+                    <td><a href="https://www.gastronom.ru/recipe/47632/salat-zimny-olive" target="_blank">Рецепт</a></td>
+                    <td><img src="https://images.gastronom.ru/kv4flJpW_Fltbb9_zAIXCD1McJlP8rOCrmzEp6KSnio/pr:recipe-cover-image/g:ce/rs:auto:0:0:0/L2Ntcy9hbGwtaW1hZ2VzL2FjM2NkZjQzLTIxZDAtNDQ4YS05ZDRjLTBkOTIxOWE2OTQyNi5qcGc.webp" alt="Оливье" class="dish-image"></td>
+                </tr>
+                <tr>
+                    <td>Семга под шубой</td>
+                    <td><span class="rating rating-low">5/10</span></td>
+                    <td><a href="https://www.gastronom.ru/recipe/51507/semga-pod-shuboj-iz-kartofelnogo-pyure" target="_blank">Рецепт</a></td>
+                    <td><img src="https://images.gastronom.ru/P6yDyPtS123rKRlx_psv5Cy00gy-D7kgTlsC4Oisozg/pr:recipe-cover-image/g:ce/rs:auto:0:0:0/L2Ntcy9hbGwtaW1hZ2VzLzM2OTBhYzgxLTgzMTQtNDQ5NS05ODMzLWZmYTA0NGEzY2IyZC5qcGc.webp" alt="Сельдь под шубой" class="dish-image"></td>
+                </tr>
+                <tr>
+                    <td>Чизкейк Нью-Йорк</td>
+                    <td><span class="rating rating-high">10/10</span></td>
+                    <td><a href="https://www.gastronom.ru/recipe/16245/nyu-jorkskij-chizkejk" target="_blank">Рецепт</a></td>
+                    <td><img src="https://images.gastronom.ru/e_djVbYxXf9GukTgL0wPYCDOsh2YXmJQEtlaggIfh8k/pr:recipe-cover-image/g:ce/rs:auto:0:0:0/L2Ntcy9hbGwtaW1hZ2VzL2NiNGRkOGY3LWQ2ZjYtNDkxZC05Y2M2LWZkZjRlOTM0MGZlOS5qcGc.webp" alt="Чизкейк" class="dish-image"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
