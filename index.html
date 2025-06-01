@@ -7,38 +7,80 @@
           integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
 <body>
-<nav class="navbar bg-body-tertiary">
-    <div class="container">
-        <a class="navbar-brand" href="#">
-            <img src="logo.png" alt="Bootstrap" width="60" height="60">
-        </a>
-        <h2 class="text-center">Студия "Проектная деятельность"</h2>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Переключатель навигации">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Главная</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Конкурсы</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Новости</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link disabled">Контакты</a>
-                </li>
-            </ul>
-        </div>
+<div class="container">
 
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+            <img src="logo.png" alt="Bootstrap" width="60" height="60">
+            Юные Python-разаботчики
+        </a>
+
+      <!-- Кнопка гамбургер для маленьких экранов -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Переключить навигацию">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Ссылки меню -->
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" href="#">Главная</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Портфолио</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Конкурсы</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Контакты</a>
+          </li>
+        </ul>
+      </div>
     </div>
-</nav>
+  </nav>
+  <!-- Конец Navbar -->
+
+</div>
 
 <div class="container-fluid mx-auto p-2 my-5">
-    <h1 class="text-center">Портфолио лучших</h1>
+    <h1 class="text-center">Лучшие из лучших</h1>
+</div>
+
+<div class="container text-center my-5">
+    <div id="carouselExampleIndicators" class="carousel slide">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="3.jpg" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="1.jpg" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="2.jpg" class="d-block w-100" alt="...">
+        </div>
+          <div class="carousel-item">
+          <img src="4.jpg" class="d-block w-100" alt="...">
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Предыдущий</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Следующий</span>
+      </button>
+    </div>
+
 </div>
 
 <div class="container text-center my-5">
@@ -101,6 +143,98 @@
         </div>
     </div>
 </div>
+
+<div class="container-fluid mx-auto p-2 my-5">
+    <h1 class="text-center">Часто задаваемые вопросы</h1>
+</div>
+
+<div class="container text-center my-5">
+    <div class="accordion accordion-flush" id="accordionFlushExample">
+        <!-- Вопрос 1 -->
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingOne">
+      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
+        aria-expanded="true" aria-controls="collapseOne">
+        Что изучают дети на занятиях?
+      </button>
+    </h2>
+    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+      data-bs-parent="#faqAccordion">
+      <div class="accordion-body">
+        Дети учатся создавать игры, анимации и интерактивные истории с помощью Scratch, Python и других детских платформ.
+        Мы также знакомим их с основами алгоритмов, логики и работы с кодом.
+      </div>
+    </div>
+  </div>
+
+  <!-- Вопрос 2 -->
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingTwo">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+        data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+        Какие возрастные группы вы обучаете?
+      </button>
+    </h2>
+    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+      data-bs-parent="#faqAccordion">
+      <div class="accordion-body">
+        Мы работаем с детьми от 7 до 14 лет. У нас есть отдельные курсы для младших школьников (7–10 лет) и подростков (11–14 лет),
+        адаптированные по уровню сложности и темпам обучения.
+      </div>
+    </div>
+  </div>
+
+  <!-- Вопрос 3 -->
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingThree">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+        data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+        Нужны ли навыки программирования для начала обучения?
+      </button>
+    </h2>
+    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+      data-bs-parent="#faqAccordion">
+      <div class="accordion-body">
+        Нет, никаких предварительных знаний не требуется! Наши занятия начинаются с самых азов. Главное — желание учиться и интерес к технологиям.
+      </div>
+    </div>
+  </div>
+    </div>
+</div>
+
+<footer class="bd-footer py-4 py-md-5 mt-5 bg-body-tertiary ">
+  <div class="container py-4 py-md-5 px-4 px-md-3 text-body-secondary">
+    <div class="row">
+      <div class="col-lg-3 mb-3">
+        <a class="d-inline-flex align-items-center mb-2 text-body-secondary text-decoration-none" href="/" aria-label="Юные Python-разаботчики">
+          <span class="fs-5">Юные Python-разаботчики</span>
+        </a>
+        <ul class="list-unstyled small">
+          <li class="mb-2">Разработано и создано со всей любовью с помощью Bootstrap в качестве домашнего задания для курса от Зерокодерва.</li>
+          <li class="mb-2">Программист на Python с помощью ChatGPT2.0 (Хотя это не точно).</li>
+        </ul>
+      </div>
+      <div class="col-6 col-lg-2 offset-lg-1 mb-3">
+        <h5>Пример подвала</h5>
+        <ul class="list-unstyled ">
+          <li class="mb-2 "><a href="#">Главная</a></li>
+          <li class="mb-2"><a href="#">Портфолио детей</a></li>
+          <li class="mb-2"><a href="#">Конкурсы</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-lg-2 mb-3">
+        <h5>О нас</h5>
+        <ul class="list-unstyled">
+          <li class="mb-2"><a href="#">Контакты</a></li>
+          <li class="mb-2"><a href="#">Написать нам</a></li>
+          <li class="mb-2"><a href="#">Заказать обратный звонок</a></li>
+          <li class="mb-2"><a href="#">Подать заявку</a></li>
+        </ul>
+      </div>
+     </div>
+  </div>
+</footer>
+
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
