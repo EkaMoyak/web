@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Текущее время | Dark Mode</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #6c5ce7;
+            --secondary: #a29bfe;
+            --dark: #2d3436;
+            --light: #f5f6fa;
+            --success: #00b894;
+            --card-bg: #34495e;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            transition: all 0.3s ease;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: var(--dark);
+            color: var(--light);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 2rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        h1 {
+            font-weight: 500;
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            color: var(--primary);
+        }
+
+        .subtitle {
+            font-weight: 300;
+            opacity: 0.8;
+        }
+
+        .time-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .card-title {
+            font-size: 1rem;
+            font-weight: 400;
+            opacity: 0.7;
+            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .card-value {
+            font-size: 1.8rem;
+            font-weight: 500;
+            color: var(--secondary);
+        }
+
+        .main-card {
+            grid-column: 1 / -1;
+            text-align: center;
+            background: linear-gradient(135deg, var(--primary), #0984e3);
+        }
+
+        .main-card .card-value {
+            font-size: 3.5rem;
+            color: white;
+            font-weight: 300;
+        }
+
+        .timestamp {
+            margin-top: 3rem;
+            text-align: center;
+            opacity: 0.6;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            .time-cards {
+                grid-template-columns: 1fr;
+            }
+
+            .main-card .card-value {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Текущее время</h1>
+            <p class="subtitle">Актуальная информация о дате и времени</p>
+        </header>
+
+        <div class="time-cards">
+            <div class="card main-card">
+                <div class="card-title">Текущие дата и время</div>
+                <div class="card-value">{{ time.full }}</div>
+            </div>
+
+            <div class="card">
+                <div class="card-title">Только время</div>
+                <div class="card-value">{{ time.time }}</div>
+            </div>
+
+            <div class="card">
+                <div class="card-title">Только дата</div>
+                <div class="card-value">{{ time.date }}</div>
+            </div>
+
+            <div class="card">
+                <div class="card-title">День недели</div>
+                <div class="card-value">{{ time.weekday }}</div>
+            </div>
+
+            <div class="card">
+                <div class="card-title">ISO формат</div>
+                <div class="card-value">{{ time.iso }}</div>
+            </div>
+        </div>
+
+        <div class="timestamp">
+            Timestamp: {{ time.timestamp }}
+        </div>
+    </div>
+</body>
+</html>
